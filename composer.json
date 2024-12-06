@@ -65,7 +65,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "attargah\\gogetssl\\GogetSSLServiceProvider"
+                "Attargah\\GogetSSL\\GogetSSLServiceProvider"
             ]
         }
     },
