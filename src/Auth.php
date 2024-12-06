@@ -17,23 +17,24 @@ class Auth
         $this->config = $config;
     }
 
-    public function getToken(): string
+    public function getKey(): string
     {
 
-        $accessToken = Cache::get('gogetssl_key');
+        $key = Cache::get('gogetssl_key');
 
-        if (!$accessToken) {
-            return $this->fetchNewToken();
+        if (!$key) {
+            return $this->fetchNewKey();
         }
 
-        return $accessToken;
+        return $key;
     }
 
-    public function fetchNewToken(): string
+    public function fetchNewKey(): string
     {
 
         try {
             $client = new Client();
+
             $response = $client->post($this->config['url'] . '/auth', [
                 'form_params' => [
                     'user' => $this->config['username'],
@@ -49,7 +50,7 @@ class Auth
                 }
 
             }
-            throw new \Exception('Token fetch failed: ' . $response->getBody()->getContents());
+            throw new \Exception('Key fetch failed: ' . $response->getBody()->getContents());
         } catch (\Exception $e) {
             return 'Error: ' . $e->getMessage();
         }

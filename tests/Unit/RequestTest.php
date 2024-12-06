@@ -1,5 +1,7 @@
 <?php
 
+use Attargah\GogetSSL\GogetSSL;
+use Attargah\GogetSSL\Models\Products;
 use GuzzleHttp\Client;
 
 it('Auth Request Test', function () {
@@ -19,8 +21,10 @@ it('Auth Request Test', function () {
 
         expect(empty($data['key']))->toBeFalse();
 
-
     }
 
 });
+
+
+
 

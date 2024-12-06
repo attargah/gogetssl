@@ -2,24 +2,23 @@
 
 namespace Attargah\GogetSSL;
 
+use Attargah\GogetSSL\Models\Products;
+
 class GogetSSL implements \Attargah\GogetSSL\Contracts\GogetSSL
 {
 
     protected array $config;
 
-    protected string $token;
-
+    protected string $key;
 
     public function __construct(array $config){
-
         $this->config = $config;
-        $this->token = (new Auth($this->config))->getToken();
-
+        $this->key = (new Auth($this->config))->getKey();
     }
 
-    public function Products()
+    public function Products(): Products
     {
-        // TODO: Implement Products() method.
+       return new Products($this->config);
     }
 
     public function CSR()
@@ -60,6 +59,18 @@ class GogetSSL implements \Attargah\GogetSSL\Contracts\GogetSSL
     public function Invoices()
     {
         // TODO: Implement Invoices() method.
+    }
+
+    public function handleResponse($response):array
+    {
+        $data = json_decode($response->getBody()->getContents(), true) ?? ['error'=>'Data not found'];
+        return [
+            'success' => empty($data['error']),
+            'error' => !empty($data['error']),
+            'body' => $data,
+            'status' => $response->getStatusCode(),
+        ];
+
     }
 
 

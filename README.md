@@ -18,8 +18,7 @@ composer require attargah/gogetssl
 ## Usage
 
 ```php
-$skeleton = new attargah\Gogetssl();
-echo $skeleton->echoPhrase('Hello, attargah!');
+
 ```
 
 ## Testing
