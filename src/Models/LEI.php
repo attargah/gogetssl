@@ -17,7 +17,7 @@ class LEI extends GogetSSL
     public function __construct($config)
     {
         parent::__construct($config);
-        $this->url = $this->config['GOGETSSL_API_URL'] . '/';
+        $this->url = $this->config['url'] . '/';
         $this->client = new Client();
     }
 

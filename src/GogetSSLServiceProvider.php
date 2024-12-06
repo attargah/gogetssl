@@ -28,6 +28,7 @@ class GogetSSLServiceProvider extends ServiceProvider
      */
     public function register()
     {
+
         $this->mergeConfigFrom(__DIR__.'/../config/gogetssl.php', 'gogetssl');
         $this->app->singleton(GogetSSL::class, function ($app) {
             return new GogetSSL($app['config']['gogetssl']);

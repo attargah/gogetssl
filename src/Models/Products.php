@@ -19,7 +19,7 @@ class Products extends GogetSSL
     {
 
         parent::__construct($config);
-        $this->url = $this->config['GOGETSSL_API_URL'] . '/products';
+        $this->url = $this->config['url'] . '/products';
         $this->client = new Client();
     }
 

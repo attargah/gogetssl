@@ -18,7 +18,7 @@ class Validation extends GogetSSL
     public function __construct($config)
     {
         parent::__construct($config);
-        $this->url = $this->config['GOGETSSL_API_URL'] . '/orders/ssl/';
+        $this->url = $this->config['url'] . '/orders/ssl/';
         $this->client = new Client();
     }
 

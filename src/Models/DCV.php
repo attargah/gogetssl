@@ -16,7 +16,7 @@ class DCV extends GogetSSL
     public function __construct($config)
     {
         parent::__construct($config);
-        $this->url = $this->config['GOGETSSL_API_URL'] . '/tools';
+        $this->url = $this->config['url'] . '/tools';
         $this->client = new Client();
     }
 

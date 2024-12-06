@@ -18,7 +18,7 @@ class CSR extends GogetSSL
     public function __construct($config)
     {
         parent::__construct($config);
-        $this->url = $this->config['GOGETSSL_API_URL'] . '/tools/csr';
+        $this->url = $this->config['url'] . '/tools/csr';
         $this->client = new Client();
     }
 

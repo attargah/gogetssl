@@ -16,7 +16,7 @@ class Account extends GogetSSL
     public function __construct($config)
     {
         parent::__construct($config);
-        $this->url = $this->config['GOGETSSL_API_URL'] . '/account/';
+        $this->url = $this->config['url'] . '/account/';
         $this->client = new Client();
     }
 
