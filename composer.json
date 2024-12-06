@@ -5,8 +5,10 @@
         "attargah",
         "gogetssl"
     ],
+    "version": "v1.0.0",
     "homepage": "https://github.com/attargah/gogetssl",
     "license": "MIT",
+    
     "authors": [
         {
             "name": "Oguz Kucuk",
@@ -18,7 +20,7 @@
         "php": "^8.2",
         "spatie/laravel-package-tools": "^1.16",
         "illuminate/contracts": "^10.0||^11.0",
-        "ext-http": "*"
+        "composer/installers": "~1.0"
     },
     "require-dev": {
         "larastan/larastan": "^2.9",
@@ -41,7 +43,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "attargah\\gogetssl\\Tests\\": "tests",
+            "Attargah\\GogetSSL\\Tests\\": "tests",
             "Tests\\": "tests/"
         },
         "classmap": [
@@ -63,10 +65,13 @@
     "extra": {
         "laravel": {
             "providers": [
-                "attargah\\gogetssl\\GogetSSLServiceProvider"
-            ]
+                "Attargah\\GogetSSL\\GogetSSLServiceProvider"
+            ],
+            "aliases": {
+                "GogetSSL": "Attargah\\GogetSSL\\Facades\\GogetSSL"
+            }
         }
     },
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "prefer-stable": true
 }
