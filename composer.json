@@ -43,7 +43,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "attargah\\gogetssl\\Tests\\": "tests",
+            "Attargah\\GogetSSL\\Tests\\": "tests",
             "Tests\\": "tests/"
         },
         "classmap": [
@@ -66,9 +66,12 @@
         "laravel": {
             "providers": [
                 "Attargah\\GogetSSL\\GogetSSLServiceProvider"
-            ]
+            ],
+            "aliases": {
+                "GogetSSL": "Attargah\\GogetSSL\\Facades\\GogetSSL"
+            }
         }
     },
-    "minimum-stability": "dev",
-    "prefer-stable": false
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
