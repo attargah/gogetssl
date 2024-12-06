@@ -2,7 +2,15 @@
 
 namespace Attargah\GogetSSL;
 
+use Attargah\GogetSSL\Models\Account;
+use Attargah\GogetSSL\Models\CSR;
+use Attargah\GogetSSL\Models\DCV;
+use Attargah\GogetSSL\Models\Invoices;
+use Attargah\GogetSSL\Models\LEI;
+use Attargah\GogetSSL\Models\Orders;
 use Attargah\GogetSSL\Models\Products;
+use Attargah\GogetSSL\Models\Validation;
+use Attargah\GogetSSL\Models\WebServers;
 
 class GogetSSL implements \Attargah\GogetSSL\Contracts\GogetSSL
 {
@@ -21,44 +29,44 @@ class GogetSSL implements \Attargah\GogetSSL\Contracts\GogetSSL
        return new Products($this->config);
     }
 
-    public function CSR()
+    public function CSR(): CSR
     {
-        // TODO: Implement CSR() method.
+        return new CSR($this->config);
     }
 
-    public function DCV()
+    public function DCV(): DCV
     {
-        // TODO: Implement DCV() method.
+        return new DCV($this->config);
     }
 
-    public function WebServers()
+    public function WebServers(): WebServers
     {
-        // TODO: Implement WebServers() method.
+        return new WebServers($this->config);
     }
 
-    public function Account()
+    public function Account(): Account
     {
-        // TODO: Implement Account() method.
+        return new Account($this->config);
     }
 
-    public function LEI()
+    public function LEI(): LEI
     {
-        // TODO: Implement LEI() method.
+        return new LEI($this->config);
     }
 
-    public function Orders()
+    public function Orders(): Orders
     {
-        // TODO: Implement Orders() method.
+        return new Orders($this->config);
     }
 
-    public function Validation()
+    public function Validation(): Validation
     {
-        // TODO: Implement Validation() method.
+        return new Validation($this->config);
     }
 
-    public function Invoices()
+    public function Invoices(): Invoices
     {
-        // TODO: Implement Invoices() method.
+        return new Invoices($this->config);
     }
 
     public function handleResponse($response):array
