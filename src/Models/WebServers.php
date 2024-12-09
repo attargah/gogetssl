@@ -23,9 +23,17 @@ class WebServers extends GogetSSL
     }
 
     /**
-     * Supplier ID
-     * for Comodo/GGSSL: 1;
-     * for Geotrust/Symantec/Thawte/RapidSSL: 2
+     * The getWebservers method returns the list of available web server types for different vendors.
+     * Web Server type required to use methods “addSSLOrder” and “reissueSSLOrder”
+     *
+     * Parameters:
+     *  Supplier ID = Comodo/GGSSL: 1 / Geotrust/Symantec/Thawte/RapidSSL: 2
+     *
+     * If no errors, following parameters will be returned:
+     *  webservers - array of available webservers
+     *  id - ID of webserver
+     *  software - Webserver or software name
+     *  success - success value (true)
      *
      * @param int $supplier_id
      * @return array
