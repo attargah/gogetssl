@@ -1,8 +1,8 @@
 # GogetSSL API integration for Laravel framework
 
-[![Latest Version on Packagist](https://img.shields.io/packagist/v/attargah/gogetssl.svg?style=flat-square)](https://packagist.org/packages/oguz-kucuk/gogetssl)
-[![Tests](https://img.shields.io/github/actions/workflow/status/attargah/gogetssl/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/oguz-kucuk/gogetssl/actions/workflows/run-tests.yml)
-[![Total Downloads](https://img.shields.io/packagist/dt/attargah/gogetssl.svg?style=flat-square)](https://packagist.org/packages/oguz-kucuk/gogetssl)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/attargah/gogetssl.svg?style=flat-square)](https://packagist.org/packages/attargah/gogetssl)
+[![Tests](https://img.shields.io/github/actions/workflow/status/attargah/gogetssl/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/attargah/gogetssl/actions/workflows/run-tests.yml)
+[![Total Downloads](https://img.shields.io/packagist/dt/attargah/gogetssl.svg?style=flat-square)](https://packagist.org/packages/attargah/gogetssl)
 
 This is a package created for Laravel Framework that allows you to connect with GogetSSL API.
 
