@@ -127,7 +127,7 @@ Array
 (
 [success] => true // if operation success
 [error] => false // if operation fail
-[body] => stdClass Object // GogetSSL Response
+[body] => Array // GogetSSL Response
 [status] => 200 // Response Status
 )
 ```
